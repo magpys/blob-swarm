@@ -1,18 +1,17 @@
-# Phaser Vite TypeScript Template
+# Blob Swarm
 
-This is a Phaser 3 project template that uses Vite for bundling. It supports hot-reloading for quick development workflow, includes TypeScript support and scripts to generate production-ready builds.
+A simulation of an ecosystem of blobs.
 
-**[This Template is also available as a JavaScript version.](https://github.com/phaserjs/template-vite)**
+Each has their own preferences and appearance and will interact with the others, moving, fighting
+and multiplying over time.
 
 ### Versions
 
-This template has been updated for:
+This game uses:
 
 - [Phaser 3.87.0](https://github.com/phaserjs/phaser)
 - [Vite 5.3.1](https://github.com/vitejs/vite)
 - [TypeScript 5.4.5](https://github.com/microsoft/TypeScript)
-
-![screenshot](screenshot.png)
 
 ## Requirements
 
