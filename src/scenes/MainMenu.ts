@@ -4,8 +4,8 @@ import {CENTER_X, CENTER_Y} from "../utils/consts.ts";
 export class MainMenu extends Scene
 {
     background: GameObjects.Image;
-    logo: GameObjects.Image;
-    title: GameObjects.Text;
+    gameTitle: GameObjects.Text;
+    mainMenuTitle: GameObjects.Text;
 
     constructor ()
     {
@@ -16,10 +16,14 @@ export class MainMenu extends Scene
     {
         this.background = this.add.image(CENTER_X, CENTER_Y, 'background');
 
-        this.logo = this.add.image(CENTER_X, CENTER_Y, 'logo');
+        this.gameTitle = this.add.text(CENTER_X, CENTER_Y - 36, 'Blob Swarm', {
+            fontFamily: 'Times New Roman', fontSize: 30, color: '#FF5722',
+            stroke: '#000000', strokeThickness: 8,
+            align: 'center'
+        }).setOrigin(0.5);
 
-        this.title = this.add.text(CENTER_X, CENTER_Y + 100, 'Main Menu', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
+        this.mainMenuTitle = this.add.text(CENTER_X, CENTER_Y + 48, 'Click to start', {
+            fontFamily: 'Arial Black', fontSize: 20, color: '#ffffff',
             stroke: '#000000', strokeThickness: 8,
             align: 'center'
         }).setOrigin(0.5);

@@ -1,5 +1,6 @@
 import { Scene } from 'phaser';
 import {CENTER_X, CENTER_Y} from "../utils/consts.ts";
+import generateBlobAtLocation from "../utils/generateBlobAtLocation.ts";
 
 export class Game extends Scene
 {
@@ -17,15 +18,16 @@ export class Game extends Scene
         this.camera = this.cameras.main;
         this.camera.setBackgroundColor(0x00ff00);
 
-        const map = this.make.tilemap({ key: 'map', tileWidth: 16, tileHeight: 16 });
-        const tileset = map.addTilesetImage('tiles', 'terrain', 16, 16, 0, 0);
+        // generate tileset section ----------------------------
+        // const map = this.make.tilemap({ key: 'map', tileWidth: 16, tileHeight: 16 });
+        // const tileset = map.addTilesetImage('tiles', 'terrain', 16, 16, 0, 0);
+        //
+        // if (!tileset) throw new Error("tileset failed to load. What now bitch!?");
 
-        if (!tileset) throw new Error("tileset failed to load. What now bitch!?");
+        // const layer = map.createLayer(0, tileset, 0, 0);
 
-        const layer = map.createLayer(0, tileset, 0, 0);
-
-        // this.background = this.add.image(CENTER_X, CENTER_Y, 'background');
-        // this.background.setAlpha(0.5);
+        // Instead of loading in a blob, I want to generate one
+        // const generatedBlob = generateBlobAtLocation(this, CENTER_X + 16, CENTER_Y + 16);
 
         const blob = this.add.sprite(CENTER_X, CENTER_Y, 'blob');
 

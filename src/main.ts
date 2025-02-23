@@ -5,13 +5,14 @@ import { MainMenu } from './scenes/MainMenu';
 import { Preloader } from './scenes/Preloader';
 
 import { Game, Types } from "phaser";
+import {SCREEN_HEIGHT, SCREEN_WIDTH} from "./utils/consts.ts";
 
 //  Find out more information about the Game Config at:
 //  https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config: Types.Core.GameConfig = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: SCREEN_WIDTH,
+    height: SCREEN_HEIGHT,
     parent: 'game-container',
     backgroundColor: '#028af8',
     scale: {
