@@ -27,7 +27,7 @@ export class Game extends Scene
         // const layer = map.createLayer(0, tileset, 0, 0);
 
         // Instead of loading in a blob, I want to generate one
-        // const generatedBlob = generateBlobAtLocation(this, CENTER_X + 16, CENTER_Y + 16);
+        const generatedBlob = generateBlobAtLocation(this, CENTER_X + 16, CENTER_Y + 16);
 
         const blob = this.add.sprite(CENTER_X, CENTER_Y, 'blob');
 
